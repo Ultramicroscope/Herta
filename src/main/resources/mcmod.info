@@ -1,0 +1,16 @@
+[
+{
+  "modid": "herta",
+  "name": "Herta",
+  "description": "Spinning Herta.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["honeyfuggle"],
+  "credits": "cj for the idea",
+  "logoFile": "icon.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
