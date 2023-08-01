@@ -1,5 +1,6 @@
 package wtf.ultra.herta;
 
+import com.mojang.realmsclient.gui.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -8,6 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
 
 @Mod(modid = "herta", version = "1.0")
 public class Herta {
@@ -29,8 +31,12 @@ public class Herta {
 
     @SubscribeEvent
     public void renderOverlay(RenderGameOverlayEvent.Text event) {
+        mc.fontRendererObj.drawString(ChatFormatting.WHITE.toString(), 0, 0, 0);
         mc.getTextureManager().bindTexture(images[frame / 8]);
-        mc.ingameGUI.drawTexturedModalRect(event.resolution.getScaledWidth() - 256, event.resolution.getScaledHeight() - 256, 0, 0, 256, 256);
+        int w = 256, h = 256, u = 0, v = 0;
+        int x = event.resolution.getScaledWidth() - w;
+        int y = event.resolution.getScaledHeight() - h;
+        mc.ingameGUI.drawTexturedModalRect(x, y, u, v, w, h);
         frame = (frame + 1) % 48;
     }
 }
