@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 @SuppressWarnings("unused")
 public class Herta implements ModInitializer {
     private static final ResourceLocation[] images;
-    private final long mspf = 100;
+    private final long mspf = 50;
     private long instant = 0;
     private int frame = 0;
 
