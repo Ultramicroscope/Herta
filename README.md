@@ -1,3 +1,3 @@
 # Herta
 
-> Forge mod to draw a spinning Herta.
+> Weave mod to draw a spinning Herta.
